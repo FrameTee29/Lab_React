@@ -25,7 +25,9 @@ class App extends React.Component {
   state= prepareStateFromWord(word); 
 
   activationHandler= (value) =>{
-    console.log(value);
+    this.setState({
+      guess: [...this.state.guess,value]
+    })
   }
 
   render() {
