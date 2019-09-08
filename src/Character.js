@@ -1,9 +1,24 @@
 import React from 'react'
 import './App.css'
 export default class CharacterCard extends React.Component {
+
+    state = {
+        active: false
+    }
+
+    activate = () => {
+        this.setState({
+            active: true
+        })
+    }
+
     render() {
+        let activeClass = this.state.active ? 'activeCard' : '';
+        let className = `card ${activeClass}`
         return (
-            <div className='card'>{this.props.value}</div>
+            <div className={className} onClick={this.activate}>
+                {this.props.value}
+            </div>
         )
     }
 }   

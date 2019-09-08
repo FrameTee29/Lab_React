@@ -8,7 +8,7 @@ class App extends React.Component {
     return (
       <div>
         {Array.from(word).map((c, i) => <CharacterCard value={c} key={i} />)}
-        {Array.from(x).map((c, i) => <CharacterCard value={c} key={i} />)}
+        {/* {Array.from(x).map((c, i) => <CharacterCard value={c} key={i} />)} */}
       </div>
     );
   }
