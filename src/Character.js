@@ -8,7 +8,7 @@ export default class CharacterCard extends React.Component {
 
     activate = () => {
         this.setState({
-            active: true
+            active: !this.state.active
         })
     }
 
